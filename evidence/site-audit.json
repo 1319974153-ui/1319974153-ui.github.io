@@ -1,0 +1,22 @@
+{
+  "subject": "温舒个人 GEO 网站",
+  "site": "https://wenshu-geo-lab-deploy-20261010.vercel.app/",
+  "date": "2026-10-10",
+  "first_technical_audit": {
+    "checks": 49,
+    "passed": 49,
+    "scope": "本地源码配置、XML、正文、链接及基础 JSON-LD 检查；非搜索收录检查"
+  },
+  "deployment_file_verification": "首轮修复部署的 24 个源文件与本地 SHA-1 一致，原生产别名保持不变",
+  "content_reader": "网页读取服务读到更新的项目正文、robots 和 sitemap；Studio 路径返回 404 提示",
+  "limitations": [
+    "本机直连有超时，未直接核对所有生产 HTTP 状态与响应头",
+    "未进行目标地区访问或搜索爬虫实际抓取验证",
+    "未配置站长验证码，未取得索引报告",
+    "消费者 AI 搜索检测停止；没有引用、推荐或转化证据"
+  ],
+  "related_cases": [
+    "/articles/crawl-readable-personal-site.html",
+    "/articles/public-pages-and-local-studio.html"
+  ]
+}

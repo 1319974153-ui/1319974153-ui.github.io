@@ -1,0 +1,11 @@
+# 温舒个人 GEO 实验项目 V1 — robots.txt
+# 允许 Googlebot、bingbot、Baiduspider、OAI-SearchBot 等正常抓取公开内容。
+# 以下 Disallow 仅限制抓取，不是权限保护，也不能保证 URL 不出现在索引中。
+# Studio 仅供本地使用，不部署；Dashboard 保留页面与响应头 noindex，不加入 sitemap。
+User-agent: *
+Allow: /
+Disallow: /studio.html
+Disallow: /experiment/dashboard.html
+
+# sitemap 地址
+Sitemap: https://1319974153-ui.github.io/sitemap.xml

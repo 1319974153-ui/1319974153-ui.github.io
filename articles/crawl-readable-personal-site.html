@@ -1,0 +1,21 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>实践案例：让个人网站的项目介绍在初始 HTML 中可读 | 温舒</title><meta name="description" content="温舒个人 GEO 网站的一次技术修复：补齐静态正文、保留交互，并区分可读取与已收录。"><meta name="robots" content="index, follow"><link rel="canonical" href="https://1319974153-ui.github.io/articles/crawl-readable-personal-site.html"><meta property="og:type" content="article"><meta property="og:title" content="实践案例：让个人网站的项目介绍在初始 HTML 中可读 | 温舒"><meta property="og:description" content="温舒个人 GEO 网站的一次技术修复：补齐静态正文、保留交互，并区分可读取与已收录。"><meta property="og:url" content="https://1319974153-ui.github.io/articles/crawl-readable-personal-site.html"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/rss+xml" title="温舒的个人 GEO 实验" href="/feed.xml"><link rel="stylesheet" href="/styles.css"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://1319974153-ui.github.io/articles/crawl-readable-personal-site.html#article",
+  "headline": "实践案例：让个人网站的项目介绍在初始 HTML 中可读",
+  "description": "温舒个人 GEO 网站的一次技术修复：补齐静态正文、保留交互，并区分可读取与已收录。",
+  "url": "https://1319974153-ui.github.io/articles/crawl-readable-personal-site.html",
+  "datePublished": "2026-10-10",
+  "dateModified": "2026-10-10",
+  "inLanguage": "zh-CN",
+  "author": {
+    "@type": "Person",
+    "@id": "https://1319974153-ui.github.io/#person",
+    "name": "温舒",
+    "url": "https://1319974153-ui.github.io/about.html"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://1319974153-ui.github.io/articles/crawl-readable-personal-site.html"
+  }
+}</script></head><body><header class="site-header"><nav class="nav container" aria-label="主导航"><a class="brand" href="/">温舒</a><ul class="nav-links"><li><a href="/">首页</a></li><li><a href="/about.html">关于</a></li><li><a href="/projects.html">项目</a></li><li><a href="/articles.html">文章</a></li><li><a href="/geo.html">GEO 实验</a></li><li><a href="/log.html">案例日志</a></li><li><a href="/social.html">公开账号</a></li><li><a href="/contact.html">联系</a></li></ul></nav></header><main class="container" id="main"><article class="reading"><header class="article-heading"><p><a href="/articles.html">文章</a> / 实践案例</p><h1>实践案例：让个人网站的项目介绍在初始 HTML 中可读</h1><p class="muted">2026-10-10 · <a href="/about.html">温舒</a> · Codex 辅助整理</p><p class="article-lead">温舒个人 GEO 网站的一次技术修复：补齐静态正文、保留交互，并区分可读取与已收录。</p></header><section class="section"><h2>背景与分工</h2><p>这是温舒个人 GEO 网站的自用案例，不是客户项目。温舒提出“拿自己当案例”的目标，提供现有网站和源码；检查、代码修复与部署由 Codex 协助实施。本篇依据实际检查记录整理，不把工具执行包装为本人独立编程成果。</p><p>首轮检查发现：项目页的项目列表由 JavaScript 注入，原始 HTML 中只有一个空容器。浏览器执行脚本后可以看到列表，但只读取初始 HTML 的工具拿不到这些介绍。不能由此推断所有搜索引擎都无法执行 JavaScript，修复目标是减少读取条件。</p></section><section class="section"><h2>实际做了什么</h2><ul><li>读取生产部署的文件，与本人提供的源码核对，确认修复的是正在使用的网站。</li><li>让维护脚本从同一份项目数据生成初始 HTML；页面交互继续使用这份数据，避免静态正文与浏览器显示各写一份。</li><li>为文章、公开账号的空状态加入可读说明；没有资料时不补造账号或项目成果。</li><li>运行链接、canonical、robots、XML 与结构化数据检查，再发布到原来的生产网址。</li></ul></section><section class="section"><h2>可核对的产出</h2><p>项目页现在直接包含项目名称、介绍、状态和案例入口，无需先运行页面脚本。可以打开项目页，使用浏览器“查看网页源代码”核对正文是否存在；仅截图不能证明初始 HTML 可读。</p><p>首轮技术审查的 49 项本地检查通过。线上文件与修复源码一致；另通过网页读取服务读到了修复后的内容。读取服务的结果不是百度、Bing、Google 的抓取回执，也不是豆包等消费者 AI 的引用证据。</p><p><a href="/projects.html">公开项目页</a> · <a href="/evidence/site-audit.json">本次公开技术记录</a></p></section><section class="section"><h2>遇到的问题与限制</h2><p>本机直连部署网址有超时；线上内容读取曾返回旧缓存。因此，验证时同时核对生产部署状态、上传文件与内容读取结果，没有把一次空白或超时直接认定为所有用户访问失败。</p><p>此案例只证明完成了网站内容与技术配置的修复。未取得中国大陆不同地区的访问测试、搜索引擎抓取日志或站长工具索引报告，不能证明收录速度提高。两篇案例记录的是同一网站、同一天修改的不同方面，不是两个独立实验。</p></section><section class="section"><h2>依据与延伸阅读</h2><ul><li><a href="https://developers.google.com/search/docs/essentials/technical">Google：搜索技术基本条件</a></li></ul><p class="muted">外部文档用于说明规则；本项目的产出与限制以案例及日志中的实际记录为准。</p></section><nav class="section" aria-label="相关内容"><p><a href="/projects.html">项目与案例</a> · <a href="/log.html">更新日志</a> · <a href="/contact.html">联系温舒</a></p></nav></article></main><footer class="site-footer"><div class="container"><p>© 2026 温舒 · 个人 GEO 实验</p><p><a href="/log.html">案例日志</a> · <a href="/feed.xml">RSS</a> · <a href="/contact.html">联系</a></p></div></footer></body></html>

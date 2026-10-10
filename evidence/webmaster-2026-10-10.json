@@ -1,0 +1,45 @@
+{
+  "site": "https://wenshu-geo-lab-deploy-20261010.vercel.app/",
+  "observed_date": "2026-10-10",
+  "purpose": "温舒个人 GEO 实验的站长工具与抓取诊断；由 Codex 协助实施和记录。",
+  "google": {
+    "sitemap_submission": "已提交",
+    "sitemap_report": "无法读取此站点地图；已发现网页 0",
+    "sitemap_live_test": {
+      "tested_at": "2026-10-10T16:18:48+08:00",
+      "url": "https://wenshu-geo-lab-deploy-20261010.vercel.app/sitemap.xml",
+      "http_status": 200,
+      "content_type": "application/xml",
+      "crawl_allowed": true,
+      "fetch_success": true,
+      "actual_xml_urls_match_local": 14
+    },
+    "homepage_index_status": "网址尚未收录到 Google；Google 无法识别此网址",
+    "homepage_index_request": "本次请求未受理：超出每日配额"
+  },
+  "baidu": {
+    "verification_configuration": "官方 HTML 标签及官方下载的验证文件已部署",
+    "file_url": "https://wenshu-geo-lab-deploy-20261010.vercel.app/baidu_verify_codeva-K6AatTlXSG.html",
+    "file_bytes": 32,
+    "browser_access": "成功打开并显示官方文件内容",
+    "html_verification_result": "无法连接到您网站的服务器",
+    "file_verification_result": "无法连接到您网站的服务器",
+    "ownership_verified": false,
+    "sitemap_submitted": false
+  },
+  "bing": {
+    "site_verified": false,
+    "status": "登录流程未完成"
+  },
+  "limits": [
+    "实时抓取成功与站点地图处理状态分别记录，不能证明已收录。",
+    "Google 首页检查尚未收录；其他网页索引状态未确认。",
+    "百度连接失败的具体网络原因未确认；浏览器可打开不代表所有爬虫可访问。",
+    "消费者 AI 搜索检测保持停止，没有个人引用或自然推荐结论。"
+  ],
+  "sources": [
+    "https://support.google.com/webmasters/answer/9012289",
+    "https://support.google.com/webmasters/answer/7451001",
+    "https://vercel.com/kb/guide/accessing-vercel-hosted-sites-from-mainland-china"
+  ]
+}

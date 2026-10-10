@@ -1,0 +1,417 @@
+/* ============================================================
+   温舒个人 GEO 实验项目 V1 — 全局样式
+   设计语言：高级、干净、现代、有个人品牌感、技术感但不赛博朋克。
+   复用 wenshu-site 的设计语言（白底、深蓝主色、简洁专业、响应式）。
+   ============================================================ */
+:root {
+  --primary: #2f5d8a;
+  --primary-dark: #244a6f;
+  --accent: #e8b04b;
+  --text: #2c2c2c;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --bg-soft: #f6f8fa;
+  --border: #e5e7eb;
+  --radius: 10px;
+  --max-width: 960px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.eyebrow { font-size: 13px; color: var(--primary); letter-spacing: .04em; }
+.updated { margin-top: 20px; font-size: 13px; }
+.reading { max-width: 760px; margin: 0 auto; }
+.article-heading { padding: 48px 0 28px; }
+.article-heading h1 { font-size: clamp(26px, 4vw, 38px); line-height: 1.45; margin: 18px 0; color: var(--primary-dark); }
+.article-lead { font-size: 18px; margin-top: 20px; }
+.reading li { margin-bottom: 10px; }
+.progress-list > div { display: grid; grid-template-columns: 150px 1fr; gap: 18px; border-bottom: 1px solid var(--border); padding: 16px 0; }
+.progress-list dt { font-weight: 600; }
+.progress-list dd { margin: 0; }
+.faq-entry { border-bottom: 1px solid var(--border); padding: 16px 0; }
+.faq-entry summary { cursor: pointer; font-weight: 600; color: var(--primary-dark); }
+.faq-entry p { margin: 12px 0 0; }
+.notice { padding: 16px; background: var(--bg-soft); border-left: 3px solid var(--primary); }
+a:focus-visible, summary:focus-visible, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .nav { height: auto; min-height: 64px; padding-top: 12px; padding-bottom: 12px; }
+  .nav-links { gap: 8px 14px; }
+  .hero h1 { font-size: 30px; }
+  .progress-list > div { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 头部导航 */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  padding: 64px 0 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.3;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.hero .tagline {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.hero .intro {
+  max-width: 680px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 通用按钮 */
+.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--bg-soft);
+}
+
+/* 区块 */
+.section {
+  padding: 36px 0;
+  border-top: 1px solid var(--border);
+}
+
+.section h1 {
+  font-size: 30px;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+}
+
+.section h3 {
+  font-size: 17px;
+  color: var(--primary-dark);
+  margin: 18px 0 8px;
+}
+
+.section p {
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.section ul {
+  margin: 0 0 12px 22px;
+}
+
+/* 卡片 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: var(--bg);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card .status {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--primary);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+}
+
+/* 列表 */
+.item-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.item-list li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.item-list li:last-child {
+  border-bottom: none;
+}
+
+.tag-list {
+  list-style: none;
+  margin-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list li {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+
+/* FAQ */
+.faq {
+  background: var(--bg-soft);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 16px;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* 表格 */
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--bg-soft);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* 空状态 */
+.empty-state {
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+/* 实验状态徽章 */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge-ok {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-empty {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Studio 表单 */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 页脚 */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  margin-top: 32px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+  .hero {
+    padding: 44px 0 28px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .nav {
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .faq {
+    padding: 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
