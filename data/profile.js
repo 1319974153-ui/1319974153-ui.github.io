@@ -1,25 +1,18 @@
-// ============================================================
-// 温舒个人 GEO 实验项目 V1 — 个人信息中心（需求四）
-// 集中维护个人信息，改一处即全站生效
-// ============================================================
-(function (global) {
-  "use strict";
-
-  global.GEO_LAB = global.GEO_LAB || {};
-
-  global.GEO_LAB.PROFILE = {
-    name: "温舒",
-    pinyin: "Wen Shu",
-    age: 26,
-    birthYear: 2000,
-    gender: "女",
-    city: "杭州",
-    jobTitle: "FDE / 全栈工程师",
-    education: "MBA 硕士",
-    bio: "温舒，26 岁，杭州。FDE / 全栈工程师，MBA 硕士。正在持续实践 AI 产品、AI 自动化、AI 视频与 AI 新媒体，同时开始探索 GEO（生成引擎优化 / AI Search Visibility）。目前以自己为实验对象，观察公开内容与持续发布是否会让搜索引擎和 AI 搜索更准确识别“温舒”。",
-    focus: ["AI 产品", "AI 自动化", "AI 视频", "AI 新媒体", "GEO"],
-    website: "https://1319974153-ui.github.io",
-    socialLinks: {}, // 由 social-links.js 维护
-    note: "本配置文件为个人真实信息，仅公开可公开字段；不虚构任何单位、客户与成果。"
-  };
-})(window);
+(function(g){g.GEO_LAB=g.GEO_LAB||{};g.GEO_LAB.PROFILE={
+  "name": "温舒",
+  "pinyin": "Wen Shu",
+  "city": "杭州",
+  "jobTitle": "FDE / 全栈工程师",
+  "bio": "温舒，常驻杭州，专注 AI 应用落地与全栈开发，项目实践涵盖 AI 面试与入职质量评估、电商自动化、客户标签、企业办公、健康穿戴交互、情侣与用餐社交，以及 GEO 和新媒体内容工具。工作涉及需求梳理、产品设计、前后端开发、模型与业务接口接入、部署测试和持续迭代。目前重点推进观引 GEO 工作台与拾帧新媒体 2.0，并持续整理真实项目中的开发过程、问题与改进经验。",
+  "focus": [
+    "AI 产品",
+    "AI 自动化",
+    "AI 视频",
+    "AI 新媒体",
+    "GEO"
+  ],
+  "website": "https://1319974153-ui.github.io",
+  "socialLinks": {},
+  "note": "本配置文件为个人真实信息，仅公开可公开字段；不虚构任何单位、客户与成果。",
+  "shortBio": "温舒｜杭州 AI 应用开发者，关注 FDE 实践与全栈交付。参与 AI 面试数字人、电商自动化、健康戒指等项目，持续建设观引 GEO 工作台与拾帧新媒体产品。"
+};})(window);

@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-12",
+  "scope": "单次页面观察，不代表长期结果；本次官网更新未重新运行消费者搜索。",
+  "google": {
+    "homepage": "indexed",
+    "sitemap": "cannot_fetch"
+  },
+  "bing": {
+    "homepage": "indexed",
+    "sitemap": "success",
+    "discoveredUrls": 14
+  },
+  "baidu": {
+    "verification": "未完成",
+    "issues": [
+      "先前 Vercel 服务器连接失败",
+      "其他免费主域添加遇到主域站点数量限制，具体原因未获官方确认"
+    ]
+  },
+  "consumerSearch": [
+    {
+      "platform": "豆包",
+      "query": "请联网搜索“杭州的温舒 FDE 全栈工程师”，说明你找到的公开资料、个人网站和项目，区分同名人物，并列出来源链接。",
+      "result": "未找到匹配的个人网站",
+      "sourcesDisplayed": 17
+    },
+    {
+      "platform": "豆包",
+      "query": "请访问 https://wenshu-geo-lab-deploy-20261010.vercel.app/ ，总结网站实际公开的信息，并说明能否读取正文及引用来源。",
+      "result": "回答表示未读取到正文，回答中的服务器故障推测未经核实",
+      "sourcesDisplayed": 12
+    },
+    {
+      "platform": "元宝",
+      "query": "请联网搜索“杭州的温舒 FDE 全栈工程师”，说明你找到的公开资料、个人网站和项目，区分同名人物，并列出来源链接。",
+      "result": "来源面板展示温舒可可公众号文章并匹配部分身份，未确认个人官网；引用文章全文未核验",
+      "sourcesDisplayed": 12
+    }
+  ],
+  "recommendation": "未取得自然需求问题中主动推荐的证据"
+}

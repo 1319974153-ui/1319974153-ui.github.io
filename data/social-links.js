@@ -1,21 +1,15 @@
-// ============================================================
-// 温舒个人 GEO 实验项目 V1 — 统一社交账号配置（需求十四）
-// 没有真实账号的写 null，不填假 URL。注册后只改这里，所有页面自动读取。
-// ============================================================
-(function (global) {
-  "use strict";
-
-  global.GEO_LAB = global.GEO_LAB || {};
-
-  global.GEO_LAB.SOCIAL_LINKS = {
-    zhihu: null,          // 知乎
-    xiaohongshu: null,    // 小红书
-    douyin: null,         // 抖音
-    kuaishou: null,       // 快手
-    bilibili: null,       // B站
-    wechat: null,         // 微信公众号
-    github: null,         // GitHub
-    douyu: null,          // 斗鱼
-    note: "以上平台账号均为待注册状态，注册后在此填入主页 URL，并同步更新 Person sameAs 与 social.html。"
-  };
-})(window);
+(function(g){g.GEO_LAB=g.GEO_LAB||{};g.GEO_LAB.SOCIAL_LINKS={
+  "zhihu": "https://www.zhihu.com/people/wen-shu-80-67",
+  "xiaohongshu": null,
+  "douyin": "https://www.douyin.com/user/MS4wLjABAAAA4jCbLFTgvfBINT_RI5-N7FriLTgwIcjKrm14Mmb61DQKHvs_7ojioS3OFKSbzbkM",
+  "kuaishou": null,
+  "bilibili": null,
+  "wechat": null,
+  "github": "https://github.com/1319974153-ui",
+  "toutiao": "https://www.toutiao.com/c/user/3506805553510484/",
+  "douyu": null,
+  "note": "2026-10-12核对GitHub、知乎、头条号、抖音、CSDN xkx2469、掘金温舒可可及博客园温舒。文章发布状态逐篇记录。",
+  "csdn": "https://blog.csdn.net/xkx2469",
+  "juejin": "https://juejin.cn/user/1202233484255738",
+  "cnblogs": "https://www.cnblogs.com/wenshu-geo"
+};})(window);

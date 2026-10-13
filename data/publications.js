@@ -1,14 +1,254 @@
-// ============================================================
-// 温舒个人 GEO 实验项目 V1 — 发布记录（需求十三）
-// 记录每次公开内容发布：title、platform、publishDate、url、contentType、topic、author、status
-// 平台预留：官网、知乎、小红书、抖音、快手、B站、微信公众号、GitHub、斗鱼
-// 状态：draft、ready、published
-// V1 不自动登录第三方平台；当前为空表示尚无真实发布记录，不虚构。
-// ============================================================
-(function (global) {
-  "use strict";
-
-  global.GEO_LAB = global.GEO_LAB || {};
-
-  global.GEO_LAB.PUBLICATIONS = [];
-})(window);
+(function(g){g.GEO_LAB=g.GEO_LAB||{};g.GEO_LAB.PUBLICATIONS=[
+  {
+    "title": "个人网站已收录，为什么 AI 还是搜不到我？",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277207",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13已登录Chrome逐篇读取公开读者页，完整正文、温舒署名、AIGC标识及真实GitHub源码链接可读；未确认匿名访问、最终审核标签、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "AI 任务超时后，先别点重试：防止重复执行的五个检查",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277213",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13已登录Chrome逐篇读取公开读者页，完整正文、温舒署名、AIGC标识及真实GitHub源码链接可读；未确认匿名访问、最终审核标签、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "实践案例：让个人网站的项目介绍在初始 HTML 中可读",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277210",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13已登录Chrome逐篇读取公开读者页，完整正文、温舒署名、AIGC标识及真实GitHub源码链接可读；未确认匿名访问、最终审核标签、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "实践案例：把公开内容与本地工作台分开",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277209",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13已登录Chrome逐篇读取公开读者页，完整正文、温舒署名、AIGC标识及真实GitHub源码链接可读；未确认匿名访问、最终审核标签、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "开始个人 GEO 前，先整理哪些公开资料？",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277208",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13已登录Chrome逐篇读取公开读者页，完整正文、温舒署名、AIGC标识及真实GitHub源码链接可读；未确认匿名访问、最终审核标签、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "观引免费开源：把AI回答与引用整理成证据",
+    "platform": "头条号",
+    "publishDate": "2026-10-13",
+    "url": "https://www.toutiao.com/article/7695975485012001290/",
+    "author": "温舒可可",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "官方后台已发布；当前登录浏览器公开正文、署名、AI声明及源码链接可读。不代表搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "观引 GEO 免费开源"
+  },
+  {
+    "title": "观引免费开源：把 AI 回答与引用整理成可核对的证据",
+    "platform": "知乎",
+    "publishDate": "2026-10-13",
+    "url": "https://zhuanlan.zhihu.com/p/2093286395594924413",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "官方显示发布成功；当前登录浏览器的公开文章页正文、封面、AI声明和源码链接已核对；未代表搜索收录。",
+    "contentType": "article",
+    "topic": "观引开源与杭州FDE实践"
+  },
+  {
+    "title": "个人网站上线后，怎样检查它是否便于检索？",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277206",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "已登录Chrome的读者页显示完整正文、温舒署名、AIGC标识和当时的项目链接；未独立验证匿名访问或最终审核标签",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "已发布、已收录、被 AI 引用，如何分别记录？",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277211",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "已登录Chrome的读者页显示完整正文、温舒署名、AIGC标识和当时的项目链接；未独立验证匿名访问或最终审核标签",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "用 Node.js 运行观引 GEO：开源工作台的回答、引用与发布状态管理",
+    "platform": "博客园",
+    "publishDate": "2026-10-12",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23277212",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "导入后台标示已发布且审核中；浏览器已读取正文、AIGC标识、署名与源码，不代表搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "观引开源工程"
+  },
+  {
+    "title": "个人网站已收录，为什么 AI 还是搜不到我？",
+    "platform": "掘金",
+    "publishDate": "2026-10-12",
+    "url": "https://juejin.cn/post/7695587730713837595",
+    "author": "温舒（账号温舒可可）",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "掘金后台已发布，浏览器公开正文与作者及源码链接已核对；不代表搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "用 Node.js 运行观引 GEO：开源工作台的回答、引用与发布状态管理",
+    "platform": "掘金",
+    "publishDate": "2026-10-12",
+    "url": "https://juejin.cn/post/7695587730713804827",
+    "author": "温舒（账号温舒可可）",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "掘金后台已发布，浏览器公开正文与作者及源码链接已核对；不代表搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "GEO 与 AI 产品工程"
+  },
+  {
+    "title": "用 Node.js 运行观引 GEO：开源工作台的回答、引用与发布状态管理",
+    "platform": "CSDN",
+    "publishDate": "2026-10-12",
+    "url": "https://blog.csdn.net/xkx2469/article/details/167702470",
+    "author": "温舒（账号xkx2469）",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "匿名访问返回200，已核对公开正文、署名和源码链接；不代表搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "观引 GEO 开源工程"
+  },
+  {
+    "title": "AI任务超时别急着重试：五项工程检查",
+    "platform": "头条号",
+    "publishDate": "2026-10-12",
+    "url": "https://www.toutiao.com/article/7695682500416356915/",
+    "author": "洒脱河流iF9xXG",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "AI 产品工程"
+  },
+  {
+    "title": "AI任务超时别急着重试：五项工程检查",
+    "platform": "抖音",
+    "publishDate": "2026-10-12",
+    "url": "https://www.douyin.com/article/7695692193272466729",
+    "author": "用户3481212278434",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "AI 产品工程"
+  },
+  {
+    "title": "个人网站已收录，为什么 AI 还是搜不到我？",
+    "platform": "抖音",
+    "publishDate": "2026-10-12",
+    "url": "https://www.douyin.com/article/7695689413044473138",
+    "author": "用户3481212278434",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "个人 GEO 实验"
+  },
+  {
+    "title": "个人网站已收录，为什么 AI 还是搜不到我？",
+    "platform": "头条号",
+    "publishDate": "2026-10-12",
+    "url": "https://www.toutiao.com/article/7695678287921594889/",
+    "author": "洒脱河流iF9xXG",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "个人 GEO 实验"
+  },
+  {
+    "title": "AI 任务超时后，先别点重试：防止重复执行的五个检查",
+    "platform": "知乎",
+    "publishDate": "2026-10-12",
+    "url": "https://zhuanlan.zhihu.com/p/2093006051717260366",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "AI 产品工程"
+  },
+  {
+    "title": "个人网站已收录，为什么 AI 还是搜不到我？",
+    "platform": "知乎",
+    "publishDate": "2026-10-12",
+    "url": "https://zhuanlan.zhihu.com/p/2093004013558044285",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "登录后台及公开文章页已核验；不代表已被搜索引擎收录或AI引用。",
+    "contentType": "article",
+    "topic": "个人 GEO 实验"
+  },
+  {
+    "title": "AI 功能从 Demo 到可用产品：模型 API、异步任务与失败重试，工程上该怎么做？",
+    "platform": "知乎",
+    "publishDate": "2026-10-09",
+    "url": "https://zhuanlan.zhihu.com/p/2091968643097743380",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "本人登录主页和文章页面均已读取",
+    "contentType": "article",
+    "topic": "AI 产品工程"
+  },
+  {
+    "title": "AI 功能从 Demo 到可用产品：模型 API、异步任务与失败重试，工程上该怎么做？",
+    "platform": "头条号",
+    "publishDate": "2026-10-09",
+    "url": "https://www.toutiao.com/article/7694623702859760166/",
+    "author": "洒脱河流iF9xXG",
+    "status": "published",
+    "verifiedAt": "2026-10-12",
+    "verification": "本人登录后台显示已发布；公开主页列出标题和链接，正文未重新核验。",
+    "contentType": "article",
+    "topic": "AI 产品工程"
+  }
+];})(window);

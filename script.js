@@ -102,6 +102,7 @@
       bilibili: "B站",
       wechat: "微信公众号",
       github: "GitHub",
+      toutiao: "头条号（洒脱河流iF9xXG）",
       douyu: "斗鱼"
     };
     var html = Object.keys(names)
