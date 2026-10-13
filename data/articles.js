@@ -76,6 +76,14 @@
     "author": "温舒",
     "sections": [
       {
+        "heading": "2026年10月13日更新：0.48.2 开发预览",
+        "paragraphs": [
+          "当前公开版本为 0.48.2。简单模式围绕“今天”“待我确认”“效果”组织工作；豆包、DeepSeek、Kimi、腾讯元宝、通义千问、文心和 ChatGPT 分别保存回答证据。这里的七个平台入口不代表无人值守采集已经完成，消费者平台仍需要打开页面并保存真实回答。",
+          "GitHub Release 提供独立启动包，内含 Node 运行时。新用户可解压后双击“启动观引”；希望阅读或修改代码的开发者也可继续使用下方源码启动方式。旧用户先导出业务备份、停止旧实例，再在新版恢复并核对模型连接。",
+          "0.48.2 发行说明记录了 576 项自动测试通过，Mac 界面检查也有记录；本版本 Windows 桌面双击验收仍待补充。下文的 558 项测试属于 10 月 12 日旧版本历史记录，不代替当前版本或客户现场验收。源码免费并采用 MIT 许可，外部模型与云服务费用另计。"
+        ]
+      },
+      {
         "heading": "为什么做这个工作台",
         "paragraphs": [
           "我是温舒，正在用自己的公开项目做个人 GEO 实验。一个经常遇到的问题是：文章发布了，AI也回答了，但事后很难确认它到底引用了哪条资料、引用时页面是否能访问、是否只是问题里已经给出了品牌名。",
@@ -117,6 +125,14 @@
     ],
     "sources": [
       {
+        "label": "0.48.2 下载与发行说明",
+        "url": "https://github.com/1319974153-ui/guanyin-geo/releases/tag/v0.48.2"
+      },
+      {
+        "label": "0.48.2 固定版本验证边界",
+        "url": "https://github.com/1319974153-ui/guanyin-geo/blob/bdab9ae798f8ef5daaabc3d9e19cc104b9291c64/docs/releases/0.48.2.md"
+      },
+      {
         "label": "观引 GEO 免费源码",
         "url": "https://github.com/1319974153-ui/guanyin-geo"
       },
@@ -132,7 +148,8 @@
         "label": "MIT许可",
         "url": "https://github.com/1319974153-ui/guanyin-geo/blob/main/LICENSE"
       }
-    ]
+    ],
+    "modified": "2026-10-13"
   },
   {
     "slug": "shizhen-newmedia-open-source",

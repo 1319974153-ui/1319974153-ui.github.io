@@ -1,5 +1,29 @@
 (function(g){g.GEO_LAB=g.GEO_LAB||{};g.GEO_LAB.PUBLICATIONS=[
   {
+    "title": "观引GEO更新：三个入口，整理七个平台的回答证据",
+    "platform": "CSDN",
+    "publishDate": "2026-10-13",
+    "url": "https://blog.csdn.net/xkx2469/article/details/167811107",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "审核通过，已登录浏览器读取公开文章正文；尚未单独验证匿名访问、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "观引 GEO 0.48.2"
+  },
+  {
+    "title": "观引GEO更新：三个入口，整理七个平台的回答证据",
+    "platform": "头条号",
+    "publishDate": "2026-10-13",
+    "url": "https://www.toutiao.com/article/7696090529028719154/",
+    "author": "温舒可可",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "官方后台已显示已发布；发布使用新版产品实图并保留AI声明。此条尚未单独验证匿名正文可访问性、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "观引 GEO 0.48.2"
+  },
+  {
     "title": "个人网站已收录，为什么 AI 还是搜不到我？",
     "platform": "博客园",
     "publishDate": "2026-10-12",
@@ -79,9 +103,10 @@
     "author": "温舒",
     "status": "published",
     "verifiedAt": "2026-10-13",
-    "verification": "官方显示发布成功；当前登录浏览器的公开文章页正文、封面、AI声明和源码链接已核对；未代表搜索收录。",
+    "verification": "2026-10-13旧文已补充观引0.48.2更新说明，已登录浏览器的公开正文可读；尚不代表匿名访问、搜索收录或AI引用。",
     "contentType": "article",
-    "topic": "观引开源与杭州FDE实践"
+    "topic": "观引开源与杭州FDE实践",
+    "modified": "2026-10-13"
   },
   {
     "title": "个人网站上线后，怎样检查它是否便于检索？",
@@ -114,10 +139,11 @@
     "url": "https://www.cnblogs.com/wenshu-geo/p/23277212",
     "author": "温舒",
     "status": "published",
-    "verifiedAt": "2026-10-12",
-    "verification": "导入后台标示已发布且审核中；浏览器已读取正文、AIGC标识、署名与源码，不代表搜索收录或AI引用。",
+    "verifiedAt": "2026-10-13",
+    "verification": "2026-10-13旧文已补充观引0.48.2更新说明，已登录浏览器的公开正文可读；尚不代表匿名访问、搜索收录或AI引用。",
     "contentType": "article",
-    "topic": "观引开源工程"
+    "topic": "观引开源工程",
+    "modified": "2026-10-13"
   },
   {
     "title": "个人网站已收录，为什么 AI 还是搜不到我？",
