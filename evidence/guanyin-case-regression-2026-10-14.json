@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-14",
+  "kind": "local_development_regression",
+  "localCommit": "bf256ea0b59f1e2a095352aa4750b46f00c644eb",
+  "runtime": "Node.js v24.14.1",
+  "command": "node --test test/goal-evidence.test.mjs test/answer-imports.test.mjs",
+  "tests": 14,
+  "passed": 14,
+  "failed": 0,
+  "fixtureType": "constructed_test_data",
+  "testNames": [
+    "consumer captures preserve exact text, independent mode/entry and observed metadata",
+    "invalid URLs, timestamps, missing dimensions and unknown versions fail before saving",
+    "citations deduplicate, unknown labels stay out of denominators, mention is not recommendation",
+    "save/retry keeps one original and changed raw evidence conflicts instead of silently succeeding",
+    "parallel identical saves settle at one capture and historical question identity survives current-version changes",
+    "legacy equal captures remain recoverable and review labels are not overwritten by a retry",
+    "import endpoint enforces writable role and brand scope",
+    "lost response keeps stable capture id and refuses changed payload until original retry resolves",
+    "form renders actual mode input and historical versions without inferring a model",
+    "adopted source titles and unknown review labels survive the save and lost-response retry",
+    "same-condition consumer retest links baseline and rejects changed context or cross-brand references",
+    "target results exclude API, trial, other entities, different questions and missing snapshots",
+    "unprompted recommendations require original name-free question, online mode, mention and explicit review",
+    "an empty goal stays unknown and historical wording is not replaced by the current target"
+  ],
+  "externalAIRequests": 0,
+  "publicPlatformPublishes": 0,
+  "limitations": [
+    "不是消费者AI搜索",
+    "不是客户交付或收益证明",
+    "不代表公开发行包已包含此开发提交"
+  ],
+  "testSourceHashes": {
+    "goal-evidence.test.mjs": "c9e935f3d88ecf7eb873b0289778416168f5ac674399eb746aed52bf73082e3e",
+    "answer-imports.test.mjs": "44f85dc8ce55c6fe2de292d2c35fcd0707d28ced284e419f41fda6ac9a312e1d"
+  }
+}
