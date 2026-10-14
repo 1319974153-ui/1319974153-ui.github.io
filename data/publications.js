@@ -1,5 +1,29 @@
 (function(g){g.GEO_LAB=g.GEO_LAB||{};g.GEO_LAB.PUBLICATIONS=[
   {
+    "title": "从面试数字人到客户标签：我做 AI 产品时最关注的四件事",
+    "platform": "博客园",
+    "publishDate": "2026-10-13",
+    "url": "https://www.cnblogs.com/wenshu-geo/p/23290969",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "网站运营任务在已登录浏览器核对公开正文、署名与AI辅助创作标识；依据共享发布台账整理。未另外核验匿名访问、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "真实项目与 AI 产品实践"
+  },
+  {
+    "title": "从面试数字人到客户标签：我做 AI 产品时最关注的四件事",
+    "platform": "知乎",
+    "publishDate": "2026-10-13",
+    "url": "https://zhuanlan.zhihu.com/p/2093436457012687931",
+    "author": "温舒",
+    "status": "published",
+    "verifiedAt": "2026-10-13",
+    "verification": "网站运营任务在已登录浏览器核对公开正文、署名与AI辅助创作标识；依据共享发布台账整理。未另外核验匿名访问、搜索收录或AI引用。",
+    "contentType": "article",
+    "topic": "真实项目与 AI 产品实践"
+  },
+  {
     "title": "观引GEO更新：三个入口，整理七个平台的回答证据",
     "platform": "CSDN",
     "publishDate": "2026-10-13",

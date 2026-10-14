@@ -415,3 +415,14 @@ th {
     grid-template-columns: 1fr;
   }
 }
+
+/* 2026-10-14：身份与项目证据页面，延续现有视觉。 */
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 20; background: var(--bg); padding: 12px 20px; color: var(--primary-dark); }
+.skip-link:focus { top: 8px; }
+.contact-example { padding: 20px; margin: 20px 0; background: var(--bg-soft); line-height: 1.9; }
+.section .item-list { margin-left: 0; }
+.section ol { padding-left: 24px; }
+.section ol li { margin-bottom: 12px; }
+a { text-underline-offset: .2em; overflow-wrap: anywhere; }
+::selection { background: #dceaf6; color: #17354e; }
+@media (max-width: 700px) { .nav { height: auto; padding-block: 12px; } .nav-links { gap: 8px 14px; } .hero h1 { font-size: 30px; } }
