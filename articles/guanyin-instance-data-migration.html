@@ -1,22 +1,22 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界 | 温舒</title><meta name="description" content="依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。"><meta name="robots" content="index, follow"><link rel="canonical" href="https://1319974153-ui.github.io/articles/guanyin-instance-data-migration.html"><meta property="og:type" content="article"><meta property="og:title" content="复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界 | 温舒"><meta property="og:description" content="依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。"><meta property="og:url" content="https://1319974153-ui.github.io/articles/guanyin-instance-data-migration.html"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/rss+xml" title="温舒的个人 GEO 实验" href="/feed.xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/portfolio.css"><script type="application/ld+json">{
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界 | 温舒</title><meta name="description" content="依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。"><meta name="robots" content="index, follow"><link rel="canonical" href="https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html"><meta property="og:type" content="article"><meta property="og:title" content="复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界 | 温舒"><meta property="og:description" content="依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。"><meta property="og:url" content="https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/rss+xml" title="温舒的个人 GEO 实验" href="/feed.xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/portfolio.css"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://1319974153-ui.github.io/articles/guanyin-instance-data-migration.html#article",
+  "@id": "https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html#article",
   "headline": "复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界",
   "description": "依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。",
-  "url": "https://1319974153-ui.github.io/articles/guanyin-instance-data-migration.html",
+  "url": "https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html",
   "datePublished": "2026-10-13",
   "dateModified": "2026-10-13",
   "inLanguage": "zh-CN",
   "author": {
     "@type": "Person",
-    "@id": "https://1319974153-ui.github.io/#person",
+    "@id": "https://wenshu.tnyma.com/#person",
     "name": "温舒",
-    "url": "https://1319974153-ui.github.io/about.html"
+    "url": "https://wenshu.tnyma.com/about.html"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://1319974153-ui.github.io/articles/guanyin-instance-data-migration.html"
+    "@id": "https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html"
   }
 }</script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><nav class="nav container" aria-label="主导航"><a class="brand" href="/">温舒<span>WEN SHU</span></a><ul class="nav-links"><li><a href="/about.html">关于</a></li><li><a href="/projects.html">项目</a></li><li><a href="/hangzhou-fde.html">FDE 实践</a></li><li><a href="/articles.html">文章</a></li><li><a href="/contact.html">联系</a></li></ul></nav></header><main class="container" id="main"><article class="reading"><header class="article-heading"><p><a href="/articles.html">文章</a> / 工程方法</p><h1>复制一份 AI 工具，数据真的隔离了吗？观引 0.48.2 的实例与迁移边界</h1><p class="muted">2026-10-13 · <a href="/about.html">温舒</a> · Codex 辅助整理</p><p class="article-lead">依据观引0.48.2公开文档，区分浏览器、服务实例与数据目录，整理备份恢复和交付检查；本文不是新的运行实测。</p></header><section class="section"><h2>内容与依据</h2><p>作者：温舒。本文由 AI 辅助整理，依据 2026 年 10 月 13 日核对的观引 0.48.2 公开文档撰写，是设计说明与验收清单，不是本轮新做的运行实测报告。</p><p>把本地 AI 工具交给另一个人时，一个容易被忽略的问题是：对方拿到的是一份干净程序，还是连同你使用过的业务数据一起拿走了？判断这件事，不能只看界面是否出现了一个新的客户名称。</p></section><section class="section"><h2>先分清界面、服务实例和数据目录</h2><p>观引 README 明确说明，本地版是单用户实例，共用同一实例的人共用数据。切换浏览器、标签页或客户视图，不会创建一个新的用户身份。因此，同事在另一个浏览器打开同一个服务地址，不应被解释为已经建立了独立的客户访问权限。</p><p>公开文档还描述了两个部署入口：从源码启动时，可以通过 GEO_PORT 调整端口、用 GEO_DATA_DIR 指定数据目录；独立启动包则为每份全新解压建立实例编号、动态端口和用户数据目录。它们解决本地运行组织问题，不等于已经具备面向互联网的多人账号系统。</p></section><section class="section"><h2>安装包与用过的目录，交接方式不同</h2><p>给新使用者交付时，应选择官方发布的干净程序包，让对方使用自己的资料与模型连接。不要把自己的已运行目录重新压缩后交给别人。</p><p>迁移自己的业务资料时，README 与版本说明给出的顺序是：在旧实例导出业务备份，停止旧实例，解压新版，在新实例恢复备份，再核对模型连接。确认恢复前保留旧数据，不把“新版能打开首页”当成迁移完成。</p></section><section class="section"><h2>加密文件也是迁移边界的一部分</h2><p>源码运行说明记录：首次启动会在自己的数据目录生成 .encryption-key，后续启动复用它；密钥缺失或冲突时启动会停止。业务备份恢复与手动搬运完整数据目录是不同操作，前者仍需重新核对模型连接，后者需按文档安全保留解密所需文件。</p><p>这类文件不应放进公开仓库、教程附件或客户演示截图。本文不展示任何真实密钥，也不建议通过公开聊天传递它们。</p></section><section class="section"><h2>一份可执行的交付检查清单</h2><p>以下是建议执行并留证的检查，不代表本轮已经跑过：</p><p>1. 使用两份全新解压的程序，记录实例编号、服务端口和各自数据目录。
 2. 在实例 A 写入一条无敏感内容的测试记录，检查实例 B 是否出现该记录；保留实际结果，不只对比首页样式。

@@ -1,22 +1,22 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 任务超时后，先别点重试：防止重复执行的五个检查 | 温舒</title><meta name="description" content="以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。"><meta name="robots" content="index, follow"><link rel="canonical" href="https://1319974153-ui.github.io/articles/ai-task-timeout-idempotency.html"><meta property="og:type" content="article"><meta property="og:title" content="AI 任务超时后，先别点重试：防止重复执行的五个检查 | 温舒"><meta property="og:description" content="以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。"><meta property="og:url" content="https://1319974153-ui.github.io/articles/ai-task-timeout-idempotency.html"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/rss+xml" title="温舒的个人 GEO 实验" href="/feed.xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/portfolio.css"><script type="application/ld+json">{
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI 任务超时后，先别点重试：防止重复执行的五个检查 | 温舒</title><meta name="description" content="以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。"><meta name="robots" content="index, follow"><link rel="canonical" href="https://wenshu.tnyma.com/articles/ai-task-timeout-idempotency.html"><meta property="og:type" content="article"><meta property="og:title" content="AI 任务超时后，先别点重试：防止重复执行的五个检查 | 温舒"><meta property="og:description" content="以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。"><meta property="og:url" content="https://wenshu.tnyma.com/articles/ai-task-timeout-idempotency.html"><meta name="twitter:card" content="summary"><link rel="alternate" type="application/rss+xml" title="温舒的个人 GEO 实验" href="/feed.xml"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/portfolio.css"><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "@id": "https://1319974153-ui.github.io/articles/ai-task-timeout-idempotency.html#article",
+  "@id": "https://wenshu.tnyma.com/articles/ai-task-timeout-idempotency.html#article",
   "headline": "AI 任务超时后，先别点重试：防止重复执行的五个检查",
   "description": "以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。",
-  "url": "https://1319974153-ui.github.io/articles/ai-task-timeout-idempotency.html",
+  "url": "https://wenshu.tnyma.com/articles/ai-task-timeout-idempotency.html",
   "datePublished": "2026-10-12",
   "dateModified": "2026-10-12",
   "inLanguage": "zh-CN",
   "author": {
     "@type": "Person",
-    "@id": "https://1319974153-ui.github.io/#person",
+    "@id": "https://wenshu.tnyma.com/#person",
     "name": "温舒",
-    "url": "https://1319974153-ui.github.io/about.html"
+    "url": "https://wenshu.tnyma.com/about.html"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://1319974153-ui.github.io/articles/ai-task-timeout-idempotency.html"
+    "@id": "https://wenshu.tnyma.com/articles/ai-task-timeout-idempotency.html"
   }
 }</script></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><nav class="nav container" aria-label="主导航"><a class="brand" href="/">温舒<span>WEN SHU</span></a><ul class="nav-links"><li><a href="/about.html">关于</a></li><li><a href="/projects.html">项目</a></li><li><a href="/hangzhou-fde.html">FDE 实践</a></li><li><a href="/articles.html">文章</a></li><li><a href="/contact.html">联系</a></li></ul></nav></header><main class="container" id="main"><article class="reading"><header class="article-heading"><p><a href="/articles.html">文章</a> / 工程方法</p><h1>AI 任务超时后，先别点重试：防止重复执行的五个检查</h1><p class="muted">2026-10-12 · <a href="/about.html">温舒</a> · Codex 辅助整理</p><p class="article-lead">以假设的文章生成与发布场景，说明请求编号、结果待核对、幂等和失败恢复；附五项故障检查与官方来源。</p></header><section class="section"><h2>背景与范围</h2><p>下面是一份 AI 应用的工程设计清单，采用“生成文章并提交发布”的假设场景说明。它不是已交付客户项目的复盘，也不包含未经测试的性能结论。</p><p>用户点击生成文章，页面等了很久，最后提示超时。最直观的处理是再点一次。但第一次请求可能已经被服务端接受，甚至已经产生了结果。前端没收到响应，只能证明响应链路没有按时完成，不能证明业务动作没有发生。</p><p>如果任务还包含计费、图片生成或对外发布，直接重试就可能产生两份结果。把“超时”和“失败”写成同一种状态，是这类问题的常见起点。</p></section><section class="section"><h2>一、先给一次业务动作固定编号</h2><p>我建议在提交前生成一次操作编号，并把它与账号、内容版本和动作类型关联。用户刷新页面后，应继续查这个编号，而不是立即创建一个新的任务。</p><p>这与幂等请求的思路一致：同一次意图的重试，使用同一个请求标识。AWS Builders’ Library 的相关文档介绍了调用方提供唯一请求标识的设计，并讨论了服务端原子记录请求与修改结果的重要性。</p><p>注意，不是正文一样就一定是同一次操作。同一篇文章发往不同平台，或者用户确实要制作第二个版本，应有不同的业务编号；同一编号却换了参数，则应报冲突，不能静默覆盖。</p></section><section class="section"><h2>二、把“结果未知”作为真实状态</h2><p>一个简单的任务列表可以区分：待处理、执行中、待核对、已确认成功、已确认失败。</p><p>这里最关键的是“待核对”。它适用于请求可能已送达、但尚无明确回执的情况。界面应告诉用户下一步是查任务或平台内容列表，而不是一律显示“失败，重新生成”。</p><p>示例：文章发布请求超时后，先查询平台后台是否已有对应稿件；有稿件就保存平台记录编号。没有查询入口时，挂起并人工核对，而不是靠再次点击碰运气。</p></section><section class="section"><h2>三、先确认副作用，再决定是否重试</h2><p>只读查询通常比创建任务更容易安全重试，但也应遵守平台限制。涉及生成费用或发布动作时，需要先确认服务端是否支持幂等、幂等标识能保留多久，以及远端是否能按任务编号查询。</p><p>本地的“我没有记录到结果”，不等于远端没有执行。尤其是程序崩溃发生在“远端完成、本地尚未保存”的间隙，简单的文件去重并不能提供跨系统的一次且仅一次保证。</p></section><section class="section"><h2>四、队列配置不是幂等实现</h2><p>Celery 文档建议任务函数具备幂等性，并说明了消息确认与执行时机的关系。启用延迟确认或自动重试，不会替业务代码消除重复副作用。</p><p>对于普通 AI 内容任务，一个可实施的起点是：数据库唯一约束保护业务编号，工作者领取任务时带租约，完成后保存结果引用，超时后进入核对流程。以上是设计建议，具体事务与恢复策略仍要按数据库和平台接口验证。</p></section><section class="section"><h2>五、上线前做五个故障测试</h2><p>1. 连续点击两次提交，是否只产生一个逻辑任务？
 2. 请求发出后立即断网，恢复后能否找回原任务？

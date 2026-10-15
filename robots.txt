@@ -4,4 +4,4 @@ Allow: /
 Disallow: /studio.html
 Disallow: /experiment/dashboard.html
 
-Sitemap: https://1319974153-ui.github.io/sitemap.xml
+Sitemap: https://wenshu.tnyma.com/sitemap.xml
