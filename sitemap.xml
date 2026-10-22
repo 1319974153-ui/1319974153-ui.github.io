@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://wenshu.tnyma.com/</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/hangzhou-fde.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/about.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/projects.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/articles.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/geo.html</loc><lastmod>2026-10-14</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://wenshu.tnyma.com/</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/hangzhou-fde.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/about.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/projects.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/geo.html</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/experiment/ai-search.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/social.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/contact.html</loc><lastmod>2026-10-14</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/social.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/contact.html</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/log.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/articles/guanyin-evidence-walkthrough.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/articles/shizhen-content-workflow.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/articles/hangzhou-ai-project-evidence.html</loc><lastmod>2026-10-14</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles/hangzhou-ai-recruiting-implementation.html</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles/guanyin-evidence-walkthrough.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles/shizhen-content-workflow.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles/hangzhou-ai-project-evidence.html</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/articles/guanyin-instance-data-migration.html</loc><lastmod>2026-10-13</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/articles/guanyin-geo-open-source.html</loc><lastmod>2026-10-13</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/articles/shizhen-newmedia-open-source.html</loc><lastmod>2026-10-13</lastmod></url>
@@ -22,13 +23,17 @@
 <url><loc>https://wenshu.tnyma.com/articles/personal-geo-public-facts.html</loc><lastmod>2026-10-10</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/articles/published-indexed-cited.html</loc><lastmod>2026-10-10</lastmod></url>
 <url><loc>https://wenshu.tnyma.com/articles/crawl-readiness-checklist.html</loc><lastmod>2026-10-10</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/guanyin-geo.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/shizhen-newmedia.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/ai-interview.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/pet-health-ring.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/couple-space.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/ai-commerce.html</loc><lastmod>2026-10-14</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/quality-of-hire.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/customer-tagging.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/enterprise-ai-workflow.html</loc><lastmod>2026-10-13</lastmod></url>
-<url><loc>https://wenshu.tnyma.com/cases/social-dining.html</loc><lastmod>2026-10-13</lastmod></url></urlset>
+<url><loc>https://wenshu.tnyma.com/articles/ai-interview-workflow.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/articles/ai-commerce-review-and-publish.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/guanyin-geo.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/shizhen-newmedia.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/airecruitas-implementation.html</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/cross-border-commerce.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/ai-interview.html</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/pet-health-ring.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/couple-space.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/ai-commerce.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/quality-of-hire.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/customer-tagging.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/enterprise-ai-workflow.html</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://wenshu.tnyma.com/cases/social-dining.html</loc><lastmod>2026-10-15</lastmod></url></urlset>
